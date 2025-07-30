@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo de Cleber Raniele</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #e9e9e9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .card {
+            width: 100%;
+            max-width: 900px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .banner {
+            background: #2c3a47;
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #4e8cff;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .banner h1 {
+            margin: 10px 0 5px;
+            font-size: 2.2em; /* Ajustado para nome longo */
+            font-weight: 700;
+        }
+        .banner h2 {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: 400;
+            color: #c3cfe2;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas menores */
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .contact-info a, .contact-info span {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+        .contact-info a:hover {
+            color: #4e8cff;
+        }
+        .content {
+            padding: 30px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h3 {
+            font-size: 1.5em;
+            color: #2c3a47;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #4e8cff;
+            margin-bottom: 20px;
+        }
+        .section p {
+            line-height: 1.6;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+            border-left: 2px solid #ddd;
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #4e8cff;
+            border: 2px solid white;
+        }
+        .timeline-item h4 {
+            margin: 0;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        .timeline-item p {
+            margin: 5px 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skills li {
+            background-color: #4e8cff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="banner">
+            <img src="img/cleber.jpg" alt="Foto de Cleber Raniele" class="profile-image">
+            <h1>Cleber Raniele Firmino da Silva Júnior</h1>
+            <h2>Eletricista de Energias Renováveis & Estudante de Informática</h2>
+            <div class="contact-info">
+                <span>(84) 98738-3768</span> |
+                <a href="mailto:Cleberraniele@gmail.com">Cleberraniele@gmail.com</a> |
+                <a href="https://www.linkedin.com/in/cleber-raniele-079b47340/" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/Cleber-dev07" target="_blank">GitHub</a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="section">
+                <h3>Resumo Profissional</h3>
+                <p>Sou eletricista de sistemas de energia renovável fotovoltaica formado pelo IFRN, com experiência em trabalho em grupo e atividades voluntárias. Atualmente, estou cursando Técnico em Informática para expandir minhas habilidades e integrar conhecimentos de elétrica e tecnologia.</p>
+            </div>
+
+            <div class="section">
+                <h3>Formação Acadêmica</h3>
+                <div class="timeline-item">
+                    <h4>Técnico de Nível Médio em Informática</h4>
+                    <p><strong>Instituto Federal de Educação Ciência e Tecnologia Rio Grande do Norte (IFRN)</strong></p>
+                    <p><em>Cursando: 2025 - 2026</em></p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Eletricista de Sistemas de Energias Renováveis</h4>
+                    <p><strong>Instituto Federal de Educação Ciência e Tecnologia Rio Grande do Norte (IFRN)</strong></p>
+                    <p><em>Concluído em 2025</em></p>
+                </div>
+            </div>
+
+            <div class="section skills">
+                <h3>Habilidades e Interesses</h3>
+                <ul>
+                    <li>Elétrica</li>
+                    <li>Sistemas Fotovoltaicos</li>
+                    <li>Python (Básico)</li>
+                    <li>Pacote Office (Básico)</li>
+                    <li>Trabalho em Equipe</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
