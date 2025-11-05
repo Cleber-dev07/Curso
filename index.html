@@ -1,96 +1,130 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
+<html lang="pt-br"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo de Cleber Raniele</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+        
+        /* Definindo a paleta de cores */
+        :root {
+            --cor-azul-escuro: #0B2C4E; /* Azul Marinho profundo */
+            --cor-amarelo-destaque: #FFC107; /* Amarelo Âmbar/Dourado */
+            --cor-fundo-card: #f8f8f8; /* Um fundo quase branco para o card */
+            --cor-texto-principal: #333;
+            --cor-texto-claro: #FFFFFF;
+            --cor-texto-secundario: #a0b4c8; /* Um cinza-azulado claro */
+            --cor-sombra: rgba(0,0,0,0.2); /* Sombra mais escura para o card */
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #e9e9e9;
-            color: #333;
+            background-color: #000000; /* Fundo sólido preto para o caso da imagem não carregar ou para preencher */
+            color: var(--cor-texto-principal);
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             padding: 20px;
+            
+            /* PROPRIEDADES PARA O BACKGROUND DA IMAGEM */
+            background-image: url('https://www.pixground.com/wp-content/uploads/2024/06/Windows-11-Copilot-4K-Wallpaper-1081x608.jpg'); /* SUBSTITUA PELA URL DA IMAGEM REAL */
+            background-size: cover; /* Faz a imagem cobrir toda a área */
+            background-position: center center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Evita que a imagem se repita */
+            background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
         }
+
         .card {
             width: 100%;
             max-width: 900px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: var(--cor-fundo-card); /* Fundo do card quase branco */
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px var(--cor-sombra); /* Sombra mais escura */
             overflow: hidden;
+            /* Adicionado uma leve opacidade ao card para a imagem de fundo aparecer um pouco */
+            opacity: 0.95; 
         }
+
         .banner {
-            background: #2c3a47;
-            color: white;
+            background: var(--cor-azul-escuro); /* BANNER EM AZUL ESCURO */
+            color: var(--cor-texto-claro);
             padding: 40px 30px;
             text-align: center;
         }
+
         .profile-image {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 5px solid #4e8cff;
+            border: 5px solid var(--cor-amarelo-destaque); /* DETALHE EM AMARELO */
             object-fit: cover;
             margin-bottom: 15px;
         }
+
         .banner h1 {
             margin: 10px 0 5px;
             font-size: 2.2em;
             font-weight: 700;
         }
+
         .banner h2 {
             margin: 0;
             font-size: 1.2em;
             font-weight: 400;
-            color: #c3cfe2;
+            color: var(--cor-texto-secundario); /* Título secundário com tom azulado */
         }
+
         .contact-info {
             display: flex;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
             margin-top: 20px;
         }
+
         .contact-info a, .contact-info span {
-            color: white;
+            color: var(--cor-texto-claro);
             text-decoration: none;
             font-size: 1em;
             transition: color 0.3s;
         }
+
         .contact-info a:hover {
-            color: #4e8cff;
+            color: var(--cor-amarelo-destaque); /* HOVER EM AMARELO */
         }
+
         .content {
             padding: 30px;
         }
+
         .section {
             margin-bottom: 30px;
         }
+
         .section h3 {
             font-size: 1.5em;
-            color: #2c3a47;
+            color: var(--cor-azul-escuro); /* TÍTULOS EM AZUL ESCURO */
             padding-bottom: 10px;
-            border-bottom: 3px solid #4e8cff;
+            border-bottom: 3px solid var(--cor-amarelo-destaque); /* DETALHE EM AMARELO */
             margin-bottom: 20px;
         }
+
         .section p {
             line-height: 1.6;
         }
+
         .timeline-item {
             position: relative;
             padding-left: 30px;
             margin-bottom: 20px;
             border-left: 2px solid #ddd;
         }
+
         .timeline-item:last-child {
             margin-bottom: 0;
         }
+
         .timeline-item::before {
             content: '';
             position: absolute;
@@ -99,19 +133,23 @@
             width: 16px;
             height: 16px;
             border-radius: 50%;
-            background-color: #4e8cff;
-            border: 2px solid white;
+            background-color: var(--cor-amarelo-destaque); /* DETALHE DA TIMELINE EM AMARELO */
+            border: 2px solid var(--cor-fundo-card); /* Borda da cor do fundo do card */
         }
+
         .timeline-item h4 {
             margin: 0;
             font-size: 1.1em;
             font-weight: 600;
+            color: var(--cor-azul-escuro); /* Título do item em azul */
         }
+
         .timeline-item p {
             margin: 5px 0;
             font-size: 0.9em;
             color: #666;
         }
+
         .skills ul {
             list-style: none;
             padding: 0;
@@ -119,12 +157,14 @@
             flex-wrap: wrap;
             gap: 10px;
         }
+
         .skills li {
-            background-color: #4e8cff;
-            color: white;
+            background-color: var(--cor-amarelo-destaque); /* HABILIDADES EM AMARELO */
+            color: var(--cor-azul-escuro); /* Texto da Habilidade em azul escuro */
             padding: 8px 15px;
             border-radius: 20px;
             font-size: 0.9em;
+            font-weight: 600; /* Dando mais peso ao texto da tag */
         }
     </style>
 </head>
@@ -133,7 +173,7 @@
         <div class="banner">
             <img src="img/cleber.jpg" alt="Foto de Cleber Raniele" class="profile-image">
             <h1>Cleber Raniele Firmino da Silva Júnior</h1>
-            <h2>Eletricista de Energias Renováveis & Estudante de Informática</h2>
+            <h2>Eletricista de Energias Renováveis &amp; Estudante de Informática</h2>
             <div class="contact-info">
                 <span>(84) 98738-3768</span> |
                 <a href="mailto:Cleberraniele@gmail.com">Cleberraniele@gmail.com</a> |
@@ -168,10 +208,11 @@
                     <li>Sistemas Fotovoltaicos</li>
                     <li>Python (Básico)</li>
                     <li>Pacote Office (Básico)</li>
-                    <li>Trabalho em Equipe</li>      
+                    <li>Trabalho em Equipe</li>
                 </ul>
             </div>
         </div>
     </div>
+
 </body>
 </html>
